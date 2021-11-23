@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ViewFlipper
+        android:id="@+id/vf_worker_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <!--Add following blank margin for aesthetic-->
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:layout_behavior="com.workflow.utils.FixAppBarLayoutBehaviour"
+                    app:elevation="0dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        app:layout_scrollFlags="scroll" />
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/srl_worker_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_worker_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <View
+                android:background="@color/filterBackgroundColor"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_worker_list_sort_stats"
+                app:layout_constraintBottom_toBottomOf="@id/barrier__worker_filter_sort_stats" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_worker_list_filter_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_action_filter"
+                android:drawablePadding="4dp"
+                tools:text="Filter: Sewer, Assembler"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="end"
+                android:textColor="@android:color/white"
+                android:paddingTop="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintWidth_default="wrap"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_worker_list_sort_stats" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_worker_filter_sort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.65"
+                android:orientation="vertical"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_worker_list_sort_stats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_sort_white_24"
+                android:drawablePadding="4dp"
+                android:fontFamily="sans-serif-condensed"
+                tools:text="Filter: S"
+                android:textColor="@android:color/white"
+                android:paddingTop="4dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintWidth_default="wrap"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/guideline_worker_filter_sort"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier__worker_filter_sort_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tv_worker_list_filter_stats,tv_worker_list_sort_stats"
+                app:barrierDirection="bottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/layout_data_empty"/>
+
+    </ViewFlipper>
+
+    <include layout="@layout/layout_alpha_progress_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

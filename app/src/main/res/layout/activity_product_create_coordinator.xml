@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/activity_product_create" />
+
+    <include layout="@layout/layout_alpha_progress_bar" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_product_create_save"
+        style="@style/AppTheme.Button"
+        android:layout_width="match_parent"
+        android:text="@string/product_create_save"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

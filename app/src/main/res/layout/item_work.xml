@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_item_work"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:checkable="true"
+    app:strokeWidth="1dp"
+    app:strokeColor="@drawable/stroke_color"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_item_work_spk_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            tools:text="SPK No:"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bar_item_work_status"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_date_created"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Date:"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_spk_no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bar_item_work_status"/>
+
+        <TextView
+            android:id="@+id/tv_item_work_article_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            tools:text="Product ID"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bar_item_work_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_date_created" />
+
+        <TextView
+            android:id="@+id/tv_item_work_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            tools:text="Quantity"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bar_item_work_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_article_no" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_date_updated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Last updated:"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bar_item_work_status"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/bar_item_work_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="tv_item_work_drawing_status
+        , tv_item_work_sewing_status
+        , tv_item_work_assembling_status
+        , tv_item_work_sole_stitching_status
+        , tv_item_work_lining_drawing_status
+        , tv_item_work_insole_stitching_status"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_drawing_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_list_draw_stats"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_work_lining_drawing_status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_lining_drawing_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_list_lining_drawing_status"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_drawing_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_work_sewing_status"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_sewing_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_list_sew_stats"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_lining_drawing_status"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_work_assembling_status"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_assembling_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_list_assemble_stats"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_work_insole_stitching_status"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_sewing_status"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_insole_stitching_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_list_insole_stitching_status"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_assembling_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tv_item_work_sole_stitching_status"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_sole_stitching_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/work_list_sole_stitch_stats"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_insole_stitching_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline_item_work_type_bottom"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_item_work_type_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/activity_vertical_margin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

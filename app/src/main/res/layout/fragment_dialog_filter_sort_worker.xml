@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/ab_filter_sort"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="?attr/colorPrimary"-->
+<!--            app:title="@string/filter_sort_title"-->
+<!--            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_filter_sort_worker_position_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_title"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_filter_sort_worker_drawer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/position_drawer"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_sort_worker_position_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cb_filter_sort_worker_lining_drawer"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_filter_sort_worker_lining_drawer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/position_lining_drawer"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_sort_worker_position_title"
+        app:layout_constraintStart_toEndOf="@id/cb_filter_sort_worker_drawer"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_filter_sort_worker_sewer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/position_sewer"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/cb_filter_sort_worker_drawer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cb_filter_sort_worker_assembler"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_filter_sort_worker_assembler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/position_assembler"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/cb_filter_sort_worker_lining_drawer"
+        app:layout_constraintStart_toEndOf="@id/cb_filter_sort_worker_sewer"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_filter_sort_worker_sole_stitcher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/position_sole_stitcher"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/cb_filter_sort_worker_sewer"
+        app:layout_constraintEnd_toStartOf="@id/cb_filter_sort_worker_insole_stitcher"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_filter_sort_worker_insole_stitcher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/position_insole_stitcher"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/cb_filter_sort_worker_sewer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cb_filter_sort_worker_sole_stitcher"
+        />
+
+    <View
+        android:id="@+id/separator_filter_and_sort"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/separatorColor"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@id/cb_filter_sort_worker_sole_stitcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_filter_sort_worker_sort_by_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_title"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/separator_filter_and_sort"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_filter_worker_sort_by"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        android:hint="@string/sort_by_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_sort_worker_sort_by_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rg_filter_worker_sort_direction">
+
+        <AutoCompleteTextView
+            android:id="@+id/actv_filter_worker_sort_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="false"
+            android:editable="false"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_filter_worker_sort_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/tv_filter_sort_worker_sort_by_title"
+        app:layout_constraintStart_toEndOf="@id/til_filter_worker_sort_by"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_filter_worker_sort_direction_asc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/sort_asc" />
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_filter_worker_sort_direction_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/sort_desc" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_filter_sort_worker_apply"
+        style="@style/AppTheme.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_filter_worker_sort_by"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

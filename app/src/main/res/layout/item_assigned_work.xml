@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:id="@+id/layout_worker_work"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:checkable="true"
+    app:strokeColor="@drawable/stroke_color"
+    app:strokeWidth="1dp"
+    app:cardElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_spk_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            tools:text="1 May 2020"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_assigned_work_date_assigned"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_assigned_work_spk_no" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_spk_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            tools:text="SPK 101"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_item_assigned_work_quantity"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_article_no"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="A01101"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_assigned_work_spk_date"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Drawer"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_assigned_work_article_no"/>
+
+        <ImageView
+            android:id="@+id/iv_item_assigned_work_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_assignment_turned_in_black_24"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/iv_desc_completed" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_date_assigned"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:textAlignment="textEnd"
+            tools:text="2 May 2020 13:00"
+            android:fontFamily="sans-serif-light"
+            app:layout_constraintStart_toEndOf="@id/tv_item_assigned_work_spk_date"
+            app:layout_constraintEnd_toStartOf="@id/iv_item_assigned_work_done"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_assigned_work_quantity_remaining"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            tools:text="5 dari 10 pasang"
+            android:textSize="16sp"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_item_assigned_work_done"
+            app:layout_constraintStart_toStartOf="@id/tv_item_assigned_work_date_assigned"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_quantity_remaining"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            tools:text="Sisa 1 pasang"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_assigned_work_quantity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_item_assigned_work_date_assigned"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_item_assigned_work_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_item_assigned_work_type,tv_item_assigned_work_date_assigned"/>
+
+        <View
+            android:id="@+id/view_item_assigned_work_bottom_margin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_item_assigned_work_bottom"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_assigned_work_notes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="This is my notes"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier_item_assigned_work_bottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

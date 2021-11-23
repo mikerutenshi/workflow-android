@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_searchable_spinner_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/searchable_spinner_hint"
+        android:layout_margin="@dimen/activity_vertical_margin">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_searchable_spinner_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="number"
+            android:imeOptions="actionDone"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ViewFlipper
+        android:id="@+id/vf_dialog_searchable_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/til_searchable_spinner_search">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_searchable_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+        <include layout="@layout/layout_error"/>
+        <include layout="@layout/layout_data_empty"/>
+
+    </ViewFlipper>
+
+    <include layout="@layout/layout_alpha_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/til_searchable_spinner_search"
+        android:layout_alignBottom="@id/vf_dialog_searchable_spinner" />
+
+</RelativeLayout>

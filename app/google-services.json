@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "766852700153",
+    "firebase_url": "https://borsa-production.firebaseio.com",
+    "project_id": "borsa-production",
+    "storage_bucket": "borsa-production.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766852700153:android:3a6a1cb0e836f4134bcf28",
+        "android_client_info": {
+          "package_name": "com.workflow.v1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766852700153-gnds14r67fie2ht8k0inbibq8o06peut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSsG6h0ARcdWglZZnVl9VePWm1xRiA6zY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766852700153-gnds14r67fie2ht8k0inbibq8o06peut.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_worker_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_behavior="com.workflow.utils.FixAppBarLayoutBehaviour"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_worker_work_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Jane"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_worker_work_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Assembler"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    app:layout_constraintTop_toBottomOf="@id/tv_worker_work_name"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_worker_work_position"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:hint="@string/worker_create_position_hint"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tv_worker_work_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/actv_worker_work_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:focusableInTouchMode="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier_bottom_worker_work_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="til_worker_work_position,tv_worker_work_position" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_worker_work_date"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/worker_work_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:weightSum="10"
+                    app:layout_constraintHorizontal_weight="7"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_bottom_worker_work_position"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/til_worker_work_quantity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_worker_work_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_worker_work_quantity"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/work_create_quantity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintTop_toBottomOf="@id/barrier_bottom_worker_work_position"
+                    app:layout_constraintStart_toEndOf="@id/til_worker_work_date"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_worker_work_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:imeOptions="actionDone"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_worker_work_notes"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/work_create_notes"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="120"
+                    app:layout_constraintTop_toBottomOf="@id/til_worker_work_quantity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_worker_work_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="120"
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                    android:id="@+id/tv_worker_work_subheader"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="sans-serif-medium"-->
+<!--                    android:text="@string/worker_work_choose_work"-->
+<!--                    android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/til_worker_work_notes"/>-->
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/separatorColor"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_worker_work_notes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_worker_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_assign_work_list"
+                style="@style/AppTheme.RecyclerViewMainList" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <include android:id="@+id/layout_worker_work_data_empty" layout="@layout/layout_data_empty" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <View
+        android:background="@color/filterBackgroundColor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_worker_work_sort_stats"
+        app:layout_constraintBottom_toBottomOf="@id/barrier_worker_work_filter_sort_stats" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_worker_work_filter_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_action_filter"
+        android:drawablePadding="4dp"
+        tools:text="Filter: Sewer, Assembler"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="end"
+        android:textColor="@android:color/white"
+        android:paddingTop="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_worker_work_sort_stats" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_worker_work_filter_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.65"
+        android:orientation="vertical"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_worker_work_sort_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_sort_white_24"
+        android:drawablePadding="4dp"
+        android:fontFamily="sans-serif-condensed"
+        tools:text="Filter: S"
+        android:textColor="@android:color/white"
+        android:paddingTop="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline_worker_work_filter_sort"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_worker_work_filter_sort_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_worker_work_filter_stats,tv_worker_work_sort_stats"
+        app:barrierDirection="bottom" />
+
+    <Button
+        android:id="@+id/btn_assign_worker_work"
+        style="@style/AppTheme.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/product_create_save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <include layout="@layout/layout_alpha_progress_bar"
+        android:id="@+id/progress_bar_worker_work"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

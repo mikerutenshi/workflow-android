@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.workflow">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="false"
+        android:name=".WorkflowApplication"
+        android:icon="@mipmap/ic_borsa"
+        android:roundIcon="@mipmap/ic_borsa_round"
+        android:label="${appName}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:label"
+        >
+        <activity
+            android:name=".presentation.view.activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="${appName}"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.view.activities.ProductCreateActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"
+            android:label="@string/product_create_title"
+            />
+        <activity android:name=".presentation.view.activities.WorkCreateActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"
+            android:label="@string/work_create_title"
+            />
+        <activity android:name=".presentation.view.activities.WorkerCreateActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"
+            android:label="@string/worker_create_title"
+            />
+        <activity android:name=".presentation.view.activities.WorkerDetailActivity"
+            android:label="@string/worker_detail_title"
+            />
+        <activity android:name=".presentation.view.activities.ReportWorkerDetailActivity"
+            android:label="@string/report_detail_title"
+            />
+        <activity android:name=".presentation.view.activities.AuthActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"
+            />
+        <activity android:name=".presentation.view.activities.WorkAssignActivity"
+            android:label="@string/work_assign_title"
+            />
+        <activity android:name=".presentation.view.activities.WorkDoneActivity"
+            android:label="@string/work_done_title"
+            />
+        <activity android:name=".presentation.view.activities.SalaryReportDetailActivity"
+            android:label="@string/salary_report_detail_title"
+            />
+        <activity android:name=".presentation.view.activities.WorkDetailActivity"
+            android:label="@string/work_detail_title"
+            />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8e5006561ad9a8dbe4b79f22a732c3b3e682f4ab" />
+
+    </application>
+
+</manifest>

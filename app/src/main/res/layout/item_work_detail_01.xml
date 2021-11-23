@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/layout_item_work_detail"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:strokeColor="@drawable/stroke_color"
+    app:strokeWidth="1dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_by_position_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_position"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_work_detail_by_position"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_by_name_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_by"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_work_detail_by_name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_quantity_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_quantity"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_work_detail_quantity"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_date_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_work_detail_date"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_label_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_item_work_detail_by_position_label,tv_item_work_detail_by_name_label,tv_item_work_detail_quantity_label,tv_item_work_detail_date_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_by_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1005"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_by_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Asep"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_detail_by_position" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1 dari 10 pasang"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_detail_date" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_work_detail_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10 Jan 2020 10:00"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_work_detail_by_name" />
+
+        <ImageView
+            android:id="@+id/iv_item_work_detail_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_done_black_24"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/iv_desc_completed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,74 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeBackground">@color/secondaryColor</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+<!--        <item name="colorPrimaryVariant">@color/primaryVariant</item>-->
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+<!--        <item name="colorSecondaryVariant">@color/secondaryVariant</item>-->
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+<!--        <item name="colorAccent">@color/accent</item>-->
+<!--        <item name="colorSurface">@color/surface</item>-->
+<!--        <item name="colorOnSurface">@color/onSurface</item>-->
+<!--        <item name="colorError">@color/error</item>-->
+<!--        <item name="colorOnError">@color/onError</item>-->
+<!--        <item name="colorButtonNormal">@color/buttonNormal</item>-->
+<!--        <item name="colorControlNormal">@color/controlNormal</item>-->
+<!--        <item name="colorControlActivated">@color/controlActivated</item>-->
+<!--        <item name="colorControlHighlight">@color/controlHighlight</item>-->
+<!--        <item name="colorBackgroundFloating">@color/backgroundFloating</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="AppTheme.ButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="AppTheme.ButtonFilter" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="AppTheme.FAB">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="android:src">@drawable/ic_plus_math_24</item>
+    </style>
+
+    <style name="AppTheme.RecyclerViewMainList">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="fontWorkProgressLit">
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+    <style name="fontWorkProgressOff">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+</resources>

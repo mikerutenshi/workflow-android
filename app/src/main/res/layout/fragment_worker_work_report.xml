@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:layout_behavior="com.workflow.utils.FixAppBarLayoutBehaviour"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_report_start_date"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/report_start_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/til_report_end_date"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_report_start_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_report_end_date"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:hint="@string/report_end_date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@id/til_report_start_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_report_end_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:inputType="date"
+                        android:focusableInTouchMode="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_worker_work_report_total_cost"
+                    tools:text="Biaya Total Pegawe: Rp123,000"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_report_start_date"
+                    />
+                <TextView
+                    android:id="@+id/tv_label_report_total_cost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report_total_cost_label"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    app:layout_constraintTop_toBottomOf="@id/til_report_start_date"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_worker_work_report_total_qty"
+                    tools:text="Jumlah Pasang Total Pegawe: 20"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_worker_work_report_total_cost"
+                    />
+                <TextView
+                    android:id="@+id/tv_label_report_total_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report_total_qty_label"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_report_total_cost"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_worker_work_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_worker_work_report_list"
+                style="@style/AppTheme.RecyclerViewMainList" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/layout_data_empty" />
+    <include layout="@layout/layout_alpha_progress_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

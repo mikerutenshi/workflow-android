@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_work_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_status_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary_report_label_draw"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_work_status_lining_draw"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_status_lining_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary_report_label_lining_draw"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_status_draw"
+        app:layout_constraintBottom_toTopOf="@id/tv_work_status_sew"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_status_sew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary_report_label_sew"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_status_lining_draw"
+        app:layout_constraintBottom_toTopOf="@id/tv_work_status_assemble"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_status_assemble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary_report_label_assemble"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_status_sew"
+        app:layout_constraintBottom_toTopOf="@id/tv_work_status_outsole_stitch"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_status_outsole_stitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary_report_label_outsole_stitch"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_status_assemble"
+        app:layout_constraintBottom_toTopOf="@id/tv_work_status_insole_stitch"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_work_status_insole_stitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salary_report_label_insole_stitch"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:drawablePadding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_work_status_outsole_stitch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

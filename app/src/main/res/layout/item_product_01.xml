@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_card_item_product"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@drawable/stroke_color"
+    android:checkable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_article_no_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_article"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_article_no"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_category_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_category"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_category"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_drawing_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_drawing_cost"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_drawing_cost"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_lining_drawing_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_lining_drawing_cost"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_lining_drawing_cost"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_sewing_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_sewing_cost"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_sewing_cost"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_assembling_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_assembling_cost"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_assembling_cost"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_outsole_stitching_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_outsole_stitching_cost"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_outsole_stitching_cost"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_insole_stitching_cost_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_insole_stitching_cost"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_item_product_insole_stitching_cost"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_label_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="tv_item_product_article_no_label,
+tv_item_product_drawing_cost_label,
+tv_item_product_lining_drawing_cost_label,
+tv_item_product_sewing_cost_label,
+tv_item_product_assembling_cost_label,
+tv_item_product_outsole_stitching_cost_label,
+tv_item_product_insole_stitching_cost_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_article_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1005"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="(Sepatu Pria)"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_article_no" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_drawing_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rp100,000"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_category" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_lining_drawing_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rp100,000"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_drawing_cost" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_sewing_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rp100,000"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_lining_drawing_cost" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_assembling_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rp100,000"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_sewing_cost" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_outsole_stitching_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Rp100,000"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_assembling_cost" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gr_item_product_outsole_stitching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_item_product_outsole_stitching_cost_label,
+tv_item_product_outsole_stitching_cost" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_product_insole_stitching_cost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Rp100,000"
+            android:textSize="16sp"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/barrier_label_end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_outsole_stitching_cost" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/gr_item_product_insole_stitching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_item_product_insole_stitching_cost_label,
+tv_item_product_insole_stitching_cost" />
+
+        <View
+            android:id="@+id/view_margin_bottom"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/activity_vertical_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_item_product_insole_stitching_cost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

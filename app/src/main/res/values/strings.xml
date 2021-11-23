@@ -1,0 +1,259 @@
+<resources>
+    <string name="app_name">Workflow</string>
+    <string name="app_name_v1">Borsa Production</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_sign_out">Keluar</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Cari</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_delete">Hapus</string>
+    <string name="action_edit">Ubah</string>
+
+    <string name="field_required">%s tidak boleh kosong</string>
+    <string name="field_required_simple">Tidak boleh kosong</string>
+    <string name="field_length_min_3">Minimal 3 digit</string>
+    <string name="validation_select_value">Pilih salah satu</string>
+    <string name="validation_invalid_password">Password tidak valid</string>
+    <string name="validation_invalid_password_suggestion">Password harus berisi angka, huruf besar dan huruf kecil</string>
+    <string name="validation_password_not_match">Password tidak sama</string>
+    <string name="validation_choose_a_position">Tolong pilih paling sedikit satu posisi</string>
+    <string name="validation_article_no_length">Artikel paling panjang 7 karakter</string>
+    <string name="this_field">field ini</string>
+    <string name="click_twice_to_close">Klik sekali lagi untuk keluar</string>
+    <string name="action_mode_item_chosen">%d barang terpilih</string>
+    <string name="empty_data_desc">Data tidak ditemukan</string>
+    <string name="my_role">Peran saya: %s</string>
+    <string name="no_connection">Tidak ada koneksi internet</string>
+
+    <string name="search_article_no">Cari Artikel</string>
+    <string name="search_worker">Cari Tukang</string>
+    <string name="search_work">Cari No. SPK / Artikel</string>
+
+    <string name="position_drawer">Gurat</string>
+    <string name="position_sewer">Muka</string>
+    <string name="position_assembler">Tarik</string>
+    <string name="position_sole_stitcher">Jahit Sol</string>
+    <string name="position_lining_drawer">Gurat Lapis</string>
+    <string name="position_insole_stitcher">Jahit Tatak</string>
+    <string name="position_all">Semua</string>
+
+    <string name="position_drawer_lower">gurat</string>
+    <string name="position_sewer_lower">muka</string>
+    <string name="position_assembler_lower">tarik</string>
+    <string name="position_sole_stitcher_lower">jahit sol</string>
+
+    <string name="position_drawn">selesai digurat</string>
+    <string name="position_sewn">selesai dijahit</string>
+    <string name="position_assembled">selesai ditarik</string>
+    <string name="position_sole_stitched">sol selesai dijahit</string>
+    <string name="position_lining_drawn">lapis selesai digurat</string>
+    <string name="position_insole_stitched">tatak selesai dijahit</string>
+
+    <string name="position_drawing">sedang digurat</string>
+    <string name="position_sewing">sedang dijahit</string>
+    <string name="position_assembling">sedang ditarik</string>
+    <string name="position_sole_stitching">sol sedang dijahit</string>
+    <string name="position_lining_drawing">lapis sedang digurat</string>
+    <string name="position_insole_stitching">tatak sedang dijahit</string>
+
+    <string name="nav_drawer_product_title">Sepatu</string>
+    <string name="nav_drawer_worker_title">Tukang</string>
+    <string name="nav_drawer_work_title">Kerjaan</string>
+    <string name="nav_drawer_report_title">Laporan</string>
+
+    <string name="unauthorized_unless_admin_work">Hubungi Manajemen Produksi untuk mengubah</string>
+    <string name="unauthorized_unless_admin_price">Hubungi Manajemen Keuangan untuk mengubah</string>
+    <string name="unauthorized_unless_superuser">Hubungi Administrator untuk mengubah</string>
+
+    <string name="product_list_title">Daftar Sepatu</string>
+    <string name="product_list_article_no">Artikel: %s</string>
+    <string name="product_list_color">Warna: %s</string>
+    <string name="product_list_drawing_cost">Ongkos Gurat: %s</string>
+    <string name="product_list_sewing_cost">Ongkos Jahit: %s</string>
+    <string name="product_list_assembling_cost">Ongkos Assembling: %s</string>
+    <string name="product_list_sole_stitching_cost">Ongkos Jahit Sol: %s</string>
+    <string name="product_list_insole_stitching_cost">Ongkos Jahit Tatak: %s</string>
+    <string name="product_list_lining_drawing_cost">Ongkos Gurat Lapis: %s</string>
+    <string name="product_list_article_with_cat">%1s - %2s</string>
+
+    <string name="product_create_title">Tambah Sepatu</string>
+    <string name="product_create_article_no_hint">Artikel</string>
+    <string name="product_create_color_hint">Warna</string>
+    <string name="product_create_drawing_cost_hint">Ongkos Gurat</string>
+    <string name="product_create_sewing_cost_hint">Ongkos Jahit</string>
+    <string name="product_create_assembling_cost_hint">Ongkos Assembling</string>
+    <string name="product_create_sole_stitching_cost_hint">Ongkos Jahit Sol</string>
+    <string name="product_create_lining_drawing_cost_hint">Ongkos Gurat Lapis</string>
+    <string name="product_create_insole_stitching_cost_hint">Ongkos Jahit Tatak</string>
+    <string name="product_create_save">Simpan</string>
+    <string name="product_create_category">Kategori</string>
+
+    <string name="product_edit_title">Ubah Sepatu</string>
+
+    <string name="worker_list_title">Daftar Tukang</string>
+    <string name="worker_list_name">Nama: %s</string>
+    <string name="worker_list_position">Posisi: %s</string>
+
+    <string name="worker_create_title">Tambah Tukang</string>
+    <string name="worker_create_name_hint">Nama</string>
+    <string name="worker_create_position_hint">Posisi</string>
+
+    <string name="worker_edit_title">Ubah Tukang</string>
+
+    <string name="worker_detail_title">Detail Tukang</string>
+    <string name="worker_detail_assign_work">Catat Kerjaan</string>
+    <string name="worker_detail_work_list_subtitle">Hasil Kerjaan</string>
+    <string name="worker_detail_header_on_progress">Kerjaan Turun</string>
+    <string name="worker_detail_header_done">Hasil Kerjaan</string>
+    <string name="worker_detail_all_works_assigned">Semua kerjaan kategori ini sudah diambil</string>
+
+    <string name="work_list_title">Daftar Kerjaan</string>
+    <string name="work_list_spk_no">No SPK: %s</string>
+    <string name="work_list_product_id">Artikel: %s</string>
+    <string name="work_list_quantity">Jumlah: %s pasang</string>
+    <string name="work_list_work_type">Jenis kerjaan: %s</string>
+    <string name="work_list_draw_stats">Muka Digurat</string>
+    <string name="work_list_sew_stats">Dijahit</string>
+    <string name="work_list_assemble_stats">Ditarik</string>
+    <string name="work_list_sole_stitch_stats">Sol Dijahit</string>
+    <string name="work_list_insole_stitching_status">Tatak Dijahit</string>
+    <string name="work_list_lining_drawing_status">Lapis Digurat</string>
+    <string name="work_list_date_done">Tgl selesai: %s</string>
+    <string name="work_list_date_created">Tgl SPK: %s</string>
+    <string name="work_list_date_updated">Terakhir dirubah: %s</string>
+
+    <string name="work_create_title">Tambah Kerjaan</string>
+    <string name="work_create_spk_no">No SPK</string>
+    <string name="work_create_product_id">Product ID</string>
+    <string name="work_create_quantity">Jumlah</string>
+    <string name="work_create_notes">Nota</string>
+
+    <string name="work_detail_title">Detail Kerjaan</string>
+    <string name="work_detail_assigned_to">%1s %2s</string>
+    <string name="work_detail_done_by">%1s %2s</string>
+
+    <string name="work_edit_title">Ubah Kerjaan</string>
+
+    <string name="worker_work_date">Tanggal Selesai</string>
+    <string name="worker_work_date_later_warning">Tanggal melebihi tanggal hari ini</string>
+    <string name="worker_work_nothing_chosen_warning">Tidak ada kerjaan dipilih</string>
+    <string name="worker_work_successful">SPK %1s artikel %2s %3s oleh %4s</string>
+    <string name="choose_position_title">Pilih posisi tukang:</string>
+    <string name="worker_work_choose_work">Pilih Kerjaan</string>
+
+    <string name="report_title">Laporan</string>
+    <string name="report_start_date">Dari</string>
+    <string name="report_end_date">Sampai</string>
+<!--    <string name="report_total_cost">Total gaji tukang: %s</string>-->
+    <string name="report_total_cost">%s</string>
+    <string name="report_total_cost_label">Total: </string>
+    <string name="report_total_label">Total</string>
+    <string name="report_subtotal_label">Subtotal</string>
+    <string name="report_total_qty">%s pasang</string>
+    <string name="report_total_formulae">%d x %1s = %2s</string>
+    <string name="report_total_qty_label">Total sepatu: </string>
+    <string name="report_total_worked_qty">Total kerjaan: %s pasang</string>
+    <string name="report_item_name">Nama: %s</string>
+    <string name="report_item_total_cost">Gaji: %s</string>
+    <string name="report_item_total_qty">Jumlah kerjaan: %s pasang</string>
+
+    <string name="report_detail_title">Detail Kerjaan Tukang</string>
+    <string name="report_detail_sub_header">Daftar hasil kerjaan </string>
+    <string name="report_detail_unit_price">Ongkos Sepasang: %s</string>
+    <string name="report_detail_total_cost">Total: </string>
+    <string name="report_detail_total_qty">Total kerjaan: </string>
+    <string name="report_detail_total_qty_unit">%d pasang</string>
+
+    <string name="searchable_spinner_hint">Cari</string>
+    <string name="confirm_delete_question">Apakah anda yakin akan menghapus %d barang?</string>
+    <string name="confirm_delete_ok">OK</string>
+    <string name="confirm_delete_cancel">Batal</string>
+
+    <string name="sign_in_username">Nama pengguna</string>
+    <string name="sign_in_password">Password</string>
+    <string name="sign_in_button">Masuk</string>
+    <string name="sign_in_no_account_qn">Belum punya akun?</string>
+    <string name="sign_in_register_now">Daftar sekarang</string>
+
+    <string name="register_first_name">Nama depan</string>
+    <string name="register_last_name">Nama belakang</string>
+    <string name="register_password_confirm">Konfirmasi password</string>
+    <string name="register_button">Registrasi</string>
+    <string name="register_role_hint">Peran</string>
+    <string name="register_role_admin_work">Manajemen Produksi</string>
+    <string name="register_role_admin_price">Manajemen Keuangan</string>
+    <string name="register_role_quality_assurance">Manajemen Jaminan Kualitas</string>
+
+    <string name="filter_sort_title">Filter dan Sortir</string>
+<!--    <string name="filter_status" formatted="false"><![CDATA[<em>Filter:</em> %1s &nbsp; <b>Sortir:</b> %2s]]></string>-->
+    <string name="filter_status" formatted="false"><![CDATA[Filter: %1s &nbsp; Sortir: %2s]]></string>
+<!--    <string name="sort_status" formatted="false"><![CDATA[<b>Sortir:</b> %s]]></string>-->
+    <string name="sort_status">Sortir: %s</string>
+    <string name="filter_title">Filter</string>
+    <string name="filter_by_position">Filter Posisi</string>
+    <string name="filter_by_date">Filter tanggal</string>
+    <string name="filter_sort_by_spk_no">No. SPK</string>
+    <string name="filter_sort_by_article_no">Artikel</string>
+    <string name="filter_sort_by_date">Tgl SPK</string>
+    <string name="filter_sort_by_done_at">Tgl Selesai</string>
+    <string name="filter_sort_by_assigned_at">Tgl Turun</string>
+    <string name="filter_by">Filter berdasarkan</string>
+    <string name="filter_date_type_hint">Tipe tanggal</string>
+
+    <string name="sort_title">Sortir</string>
+    <string name="sort_by_hint">Sortir dengan</string>
+    <string name="sort_apply">Terapkan</string>
+    <string name="sort_position">Posisi</string>
+    <string name="sort_name">Nama</string>
+    <string name="sort_asc">A➝Z</string>
+    <string name="sort_desc">Z➝A</string>
+
+    <string name="assigned_work_quantity">%1d dari %2d pasang</string>
+    <string name="assigned_work_quantity_remaining">Sisa %1d pasang</string>
+    <string name="assigned_work_date_assigned">Turun %s</string>
+    <string name="assigned_work_date_done">Selesai %1s</string>
+
+    <string name="work_assign_title">Berikan Kerjaan</string>
+    <string name="work_assign_date">Tanggal Turun</string>
+    <string name="work_assign_quantity_exceed">Jumlah melebihi total kerjaan</string>
+    <string name="work_assign_quantity_too_small">Jumlah harus lebih dari 0</string>
+    <string name="work_assign_successful">%1s pasang SPK %1s artikel %2s %3s oleh %4s</string>
+    
+    <string name="work_done_title">Kerjaan Selesai</string>
+    
+    <string name="salary_report_label_draw">Gurat</string>
+    <string name="salary_report_label_lining_draw">G. Lapis</string>
+    <string name="salary_report_label_sew">Muka</string>
+    <string name="salary_report_label_assemble">Tarik</string>
+    <string name="salary_report_label_outsole_stitch">J. Sol</string>
+    <string name="salary_report_label_insole_stitch">J. Tatak</string>
+
+    <string name="salary_report_detail_title">Detail Laporan</string>
+    <string name="salary_report_detail_unit_cost">%s/ps</string>
+    <string name="salary_report_detail_sub_total_cost">Total %s</string>
+    <string name="salary_report_detail_total_quantity">%d pasang</string>
+
+    <string name="iv_desc_completed">Marks Item Completed</string>
+    <string name="iv_desc_next">Next</string>
+
+    <string name="label_spk">SPK</string>
+    <string name="label_date">Tanggal</string>
+    <string name="label_article">Artikel</string>
+    <string name="label_category">Kategori</string>
+    <string name="label_quantity">Jumlah</string>
+    <string name="label_notes">Nota</string>
+    <string name="label_position">Bagian</string>
+    <string name="label_by">Dikerjakan</string>
+    <string name="label_date_assigned">Tanggal Turun</string>
+    <string name="label_date_done">Tanggal Selesai</string>
+    <string name="label_drawing_cost">Ongkos Gurat</string>
+    <string name="label_lining_drawing_cost">Ongkos Gurat Lapis</string>
+    <string name="label_sewing_cost">Ongkos Muka</string>
+    <string name="label_assembling_cost">Ongkos Tarik</string>
+    <string name="label_outsole_stitching_cost">Ongkos Jahit Sol</string>
+    <string name="label_insole_stitching_cost">Ongkos Jahit Tatak</string>
+
+</resources>

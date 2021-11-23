@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.firebase.crashlytics'
+
+ext.versionMajor = 1
+ext.versionMinor = 1
+ext.versionPatch = 7
+ext.versionClassifier = null
+ext.isSnapshot = false
+ext.minimumSdkVersion = 19
+
+android {
+    compileSdkVersion 29
+    signingConfigs {
+        release {
+            keyAlias 'workflow'
+            keyPassword 'NeyMJUUY'
+            storeFile file('/Users/Michael/Documents/workflow/workflow-keystore')
+            storePassword 'NeyMJUUY'
+        }
+    }
+    defaultConfig {
+        applicationId "com.workflow"
+        minSdkVersion project.ext.minimumSdkVersion
+        targetSdkVersion 29
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+        }
+        debugMini {
+            initWith debug
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug']
+  }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Define the endpoint strings
+    def endpointFile = file('endpoint.properties')
+    Properties endpointProperties = new Properties()
+    endpointProperties.load(new FileInputStream(endpointFile))
+
+    flavorDimensions "env", "version"
+    productFlavors {
+        dev {
+            dimension "env"
+            versionNameSuffix "-dev"
+            buildConfigField 'String', 'API_URL', endpointProperties['DEV_URL']
+        }
+        prod {
+            dimension "env"
+            buildConfigField 'String', 'API_URL', endpointProperties['PROD_URL']
+        }
+        v0 {
+            dimension "version"
+            manifestPlaceholders = [appName: "@string/app_name"]
+            applicationIdSuffix ".v0"
+        }
+        v1 {
+            dimension "version"
+            manifestPlaceholders = [appName: "@string/app_name_v1"]
+            applicationIdSuffix ".v1"
+        }
+    }
+
+    compileOptions {
+        targetCompatibility = '1.8'
+        sourceCompatibility = '1.8'
+    }
+}
+
+private Integer generateVersionCode() {
+    return ext.minimumSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+private String generateVersionName() {
+    String versionName = "${ext.versionMajor}.${ext.versionMinor}.${ext.versionPatch}"
+    if (ext.versionClassifier == null && ext.isSnapshot) {
+        ext.versionClassifier = "SNAPSHOT"
+    }
+
+    if (ext.versionClassifier != null) {
+        versionName += "-" + ext.versionClassifier
+    }
+    return versionName;
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    debugMiniImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.mobsandgeeks:android-saripaar:2.0.3'
+    implementation 'com.github.matecode:snacky:1.1.4'
+
+    implementation 'com.google.dagger:dagger:2.27'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation "io.reactivex.rxjava2:rxjava:2.1.16"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation 'com.google.firebase:firebase-analytics:17.4.3'
+//    implementation 'com.google.firebase:firebase-crashlytics:17.0.1'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation "io.reactivex.rxjava2:rxjava:2.1.16"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+}
