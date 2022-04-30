@@ -4,25 +4,25 @@ apply plugin: 'com.google.gms.google-services'
 
 ext.versionMajor = 1
 ext.versionMinor = 1
-ext.versionPatch = 7
+ext.versionPatch = 8
 ext.versionClassifier = null
 ext.isSnapshot = false
 ext.minimumSdkVersion = 19
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     signingConfigs {
         release {
             keyAlias 'workflow'
             keyPassword 'NeyMJUUY'
-            storeFile file('/Users/Michael/Documents/workflow/workflow-keystore')
+            storeFile file('/Users/Michael/Documents/borsa-app/keystores/workflow-keystore')
             storePassword 'NeyMJUUY'
         }
     }
     defaultConfig {
         applicationId "com.workflow"
         minSdkVersion project.ext.minimumSdkVersion
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode generateVersionCode()
         versionName generateVersionName()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

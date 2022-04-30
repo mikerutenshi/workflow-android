@@ -57,6 +57,7 @@ public class SalaryReportListFragment extends BaseFragment implements SalaryRepo
     @BindView(R.id.layout_alpha_progress_bar) ConstraintLayout layoutProgressBar;
     @BindView(R.id.layout_data_empty) ConstraintLayout layoutDataEmpty;
     @BindView(R.id.tv_salary_report_total_cost) AppCompatTextView tvTotalCost;
+    @BindView(R.id.tv_item_salary_report_total_qty) AppCompatTextView tvTotalQty;
     @BindView(R.id.tv_field_report_qty_draw) AppCompatTextView tvQtyDraw;
     @BindView(R.id.tv_field_report_qty_lining_draw) AppCompatTextView tvQtyLiningDraw;
     @BindView(R.id.tv_field_report_qty_sew) AppCompatTextView tvQtySew;
@@ -151,6 +152,7 @@ public class SalaryReportListFragment extends BaseFragment implements SalaryRepo
     public void renderData(GenericResponseModel<SalaryReportListModel> data) {
         List<SalaryReportListModel.Quantity> quantities = data.getData().getQuantitiesModels();
         Integer totalCost = data.getData().getTotalCost();
+        Integer totalQty = 0;
         List<SalaryReportListModel.Item> items = data.getData().getList();
 
         tvQtyDraw.setText("-");
@@ -183,8 +185,10 @@ public class SalaryReportListFragment extends BaseFragment implements SalaryRepo
                 default:
                     break;
             }
+            totalQty = totalQty + quantity.getQuantity();
         }
 
+        tvTotalQty.setText(String.format(strQuantity, totalQty));
         tvTotalCost.setText(WorkflowUtils.convertRupiah(totalCost));
 
         adapter.removeLoadingFooter();
