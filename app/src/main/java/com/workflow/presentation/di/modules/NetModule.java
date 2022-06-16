@@ -43,9 +43,9 @@ public class NetModule {
                             ErrorInterceptor errorInterceptor) {
         OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
 
-        httpClientBuilder.connectTimeout(5, TimeUnit.SECONDS);
-        httpClientBuilder.readTimeout(5, TimeUnit.SECONDS);
-        httpClientBuilder.writeTimeout(5, TimeUnit.SECONDS);
+        httpClientBuilder.connectTimeout(10, TimeUnit.SECONDS);
+        httpClientBuilder.readTimeout(10, TimeUnit.SECONDS);
+        httpClientBuilder.writeTimeout(10, TimeUnit.SECONDS);
 
         httpClientBuilder.authenticator(tokenAuthenticator);
         httpClientBuilder.addInterceptor(errorInterceptor);
