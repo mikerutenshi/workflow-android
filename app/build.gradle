@@ -10,7 +10,7 @@ ext.isSnapshot = false
 ext.minimumSdkVersion = 19
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 32
     signingConfigs {
         release {
             keyAlias 'workflow'
@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId "com.workflow"
         minSdkVersion project.ext.minimumSdkVersion
-        targetSdkVersion 30
+        targetSdkVersion 32
         versionCode generateVersionCode()
         versionName generateVersionName()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
