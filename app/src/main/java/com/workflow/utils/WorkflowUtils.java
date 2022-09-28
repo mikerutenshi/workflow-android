@@ -407,4 +407,52 @@ public class WorkflowUtils {
     public static boolean renderSortDirection(String sortDirection) {
         return !sortDirection.equals(Sort.SORT_DIRECTION_ASC);
     }
+
+    public static String renderProductCategory(Context context, Integer productCategory) {
+        String menShoesRes = context.getResources().getString(R.string.product_category_men_shoes);
+        String womenShoesRes = context.getResources().getString(R.string.product_category_women_shoes);
+        String menSandalsRes = context.getResources().getString(R.string.product_category_men_sandals);
+        String returnProductCategory;
+
+        switch (productCategory) {
+            case 1:
+                returnProductCategory =  menShoesRes;
+                break;
+            case 3:
+                returnProductCategory =  womenShoesRes;
+                break;
+            case 2:
+                returnProductCategory =  menSandalsRes;
+                break;
+            default:
+                returnProductCategory = "N/A";
+                break;
+        }
+
+        return returnProductCategory;
+    }
+
+    public static String transformProductCategory(Context context, String productCategory) {
+        String menShoesRes = context.getResources().getString(R.string.product_category_men_shoes);
+        String womenShoesRes = context.getResources().getString(R.string.product_category_women_shoes);
+        String menSandalsRes = context.getResources().getString(R.string.product_category_men_sandals);
+        String returnProductCategory;
+
+        switch (productCategory) {
+            case "Sepatu Pria":
+                returnProductCategory =  menShoesRes;
+                break;
+            case "Sepatu Wanita":
+                returnProductCategory =  womenShoesRes;
+                break;
+            case "Sandal Pria":
+                returnProductCategory =  menSandalsRes;
+                break;
+            default:
+                returnProductCategory = "N/A";
+                break;
+        }
+
+        return returnProductCategory;
+    }
 }

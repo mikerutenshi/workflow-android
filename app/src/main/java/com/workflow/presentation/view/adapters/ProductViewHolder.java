@@ -43,7 +43,7 @@ class ProductViewHolder extends BaseViewHolder<ProductModel, OnRecyclerObjectCli
     @Override
     void onBind(final ProductModel item, final OnRecyclerObjectClickListener<ProductModel> listener) {
         tvArticleNo.setText(item.getArticleNo());
-        tvCategory.setText(item.getProductCategoryName());
+        tvCategory.setText(WorkflowUtils.renderProductCategory(itemView.getContext(), item.getProductCategoryId()));
         tvDrawingCost.setText(WorkflowUtils.convertRupiah(item.getDrawingCost()));
         tvLiningDrawingCost.setText(WorkflowUtils.convertRupiah(item.getLiningDrawingCost()));
         tvSewingCost.setText(WorkflowUtils.convertRupiah(item.getSewingCost()));

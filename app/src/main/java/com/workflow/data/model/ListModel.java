@@ -35,6 +35,10 @@ public class ListModel implements Parcelable {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public boolean isHighlighted() {
         return isHighlighted;
     }

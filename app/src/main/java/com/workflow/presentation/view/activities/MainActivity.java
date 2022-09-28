@@ -572,7 +572,7 @@ public class MainActivity extends BaseActivity
                                             new WorkModel(workModel.getId(),
                                                     workModel.getSpkNo(),
                                                     workModel.getArticleNo(),
-                                                    workModel.getProductCategoryName(),
+                                                    workModel.getProductCategoryId().toString(),
                                                     workModel.getQuantity(),
                                                     workModel.getCreatedAt(),
                                                     workModel.getProductId(),

@@ -103,10 +103,6 @@ public class CurrentWorkListModel implements Checkable {
         return notes;
     }
 
-    public String getProductCategoryName() {
-        return productCategoryName;
-    }
-
     public Integer getProductCategoryId() {
         return productCategoryId;
     }

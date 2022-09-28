@@ -109,10 +109,6 @@ public class ProductModel implements MultiChoiceable, Parcelable {
         return productCategoryId;
     }
 
-    public String getProductCategoryName() {
-        return productCategoryName;
-    }
-
     @Override
     public int describeContents() {
         return 0;

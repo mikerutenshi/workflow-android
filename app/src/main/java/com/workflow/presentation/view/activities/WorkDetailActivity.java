@@ -20,6 +20,7 @@ import com.workflow.presentation.di.modules.CurrentWorkDetailModule;
 import com.workflow.presentation.view.WorkDetailView;
 import com.workflow.presentation.view.adapters.WorkDetailCollectionAdapter;
 import com.workflow.utils.DateUtils;
+import com.workflow.utils.WorkflowUtils;
 
 import javax.inject.Inject;
 
@@ -113,7 +114,7 @@ public class WorkDetailActivity extends BaseActivity implements WorkDetailView {
 
     private void renderHeader() {
         tvArticleNo.setText(workModel.getArticleNo());
-        tvCategory.setText(workModel.getProductCategoryName());
+        tvCategory.setText(WorkflowUtils.renderProductCategory(this, Integer.valueOf(workModel.getProductCategoryId())));
         tvSpkNo.setText(String.valueOf(workModel.getSpkNo()));
         tvCreatedAt.setText(DateUtils.serverToClient(workModel.getCreatedAt(), DateUtils.TYPE_DATE));
         tvQuantity.setText(String.format(strQuantity, workModel.getQty()));

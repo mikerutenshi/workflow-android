@@ -28,6 +28,7 @@ import com.workflow.data.model.SearchPaginatedQueryModel;
 import com.workflow.data.model.WorkModel;
 import com.workflow.presentation.di.components.DaggerWorkCreateComponent;
 import com.workflow.presentation.di.components.WorkCreateComponent;
+import com.workflow.presentation.di.modules.ContextModule;
 import com.workflow.presentation.di.modules.ValidatorModule;
 import com.workflow.presentation.di.modules.WorkCreateModule;
 import com.workflow.presentation.presenter.WorkCreatePresenter;
@@ -89,6 +90,7 @@ public class WorkCreateActivity extends BaseActivity implements WorkCreateView, 
             component = DaggerWorkCreateComponent.builder()
                     .applicationComponent(((WorkflowApplication) getApplication()).getApplicationComponent())
                     .workCreateModule(new WorkCreateModule(this))
+                    .contextModule(new ContextModule(this))
                     .validatorModule(new ValidatorModule(this, this))
                     .build();
         }
@@ -313,7 +315,8 @@ public class WorkCreateActivity extends BaseActivity implements WorkCreateView, 
 
     private void seedForm(WorkModel workModel) {
         etSpkNo.setText(String.valueOf(workModel.getSpkNo()));
-        etArticleNo.setText(String.format("%1s (%2s)", workModel.getArticleNo(), workModel.getProductCategoryName()));
+        String productCategory = WorkflowUtils.renderProductCategory(this, Integer.valueOf(workModel.getProductCategoryId()));
+        etArticleNo.setText(String.format("%1s (%2s)", workModel.getArticleNo(), productCategory));
         etQty.setText(String.valueOf(workModel.getQty()));
         mProductId = workModel.getProductId();
 

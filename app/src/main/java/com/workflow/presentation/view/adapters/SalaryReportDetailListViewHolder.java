@@ -52,7 +52,7 @@ public class SalaryReportDetailListViewHolder extends BaseViewHolder<SalaryRepor
         tvSpkNo.setText(String.valueOf(item.getSpkNo()));
         tvSpkDate.setText(DateUtils.serverToClient(item.getCreatedAt(), DateUtils.TYPE_DATE));
         tvArticle.setText(item.getArticleNo());
-        tvCategory.setText(item.getProductCategoryName());
+        tvCategory.setText(WorkflowUtils.transformProductCategory(itemView.getContext(), item.getProductCategoryName()));
         tvWorkType.setText(WorkflowUtils.getRenderedPosition(materialCardView.getContext(), item.getPosition()));
         tvQuantityLabel.setText(strTotal);
         tvQuantityField.setText(String.format(strQuantity, item.getQuantity(),

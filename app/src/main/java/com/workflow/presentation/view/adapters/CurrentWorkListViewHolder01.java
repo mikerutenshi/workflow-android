@@ -11,6 +11,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.workflow.R;
 import com.workflow.utils.DateUtils;
 import com.workflow.utils.Positions;
+import com.workflow.utils.WorkflowUtils;
 
 import butterknife.BindString;
 import butterknife.BindView;
@@ -60,7 +61,7 @@ public class CurrentWorkListViewHolder01 extends BaseViewHolder<CurrentWorkListM
         insoleStitchStatus = "";
 
         tvArticleNo.setText(item.getArticleNo());
-        tvCategory.setText(item.getProductCategoryName());
+        tvCategory.setText(WorkflowUtils.renderProductCategory(itemView.getContext(), item.getProductCategoryId()));
         tvSpkNo.setText(String.valueOf(item.getSpkNo()));
         tvCreatedAt.setText(DateUtils.serverToClient(item.getCreatedAt(), DateUtils.TYPE_DATE));
         tvQuantity.setText(String.format(strQuantity, item.getQuantity()));

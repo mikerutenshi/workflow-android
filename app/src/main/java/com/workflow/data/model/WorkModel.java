@@ -19,6 +19,8 @@ public class WorkModel implements MultiChoiceable, Parcelable {
     Integer productId;
     @SerializedName("article_no")
     String articleNo;
+    @SerializedName("product_category_id")
+    String productCategoryId;
     @SerializedName("product_category_name")
     String productCategoryName;
     @SerializedName("product_quantity")
@@ -79,7 +81,7 @@ public class WorkModel implements MultiChoiceable, Parcelable {
         this.id = id;
         this.spkNo = spkNo;
         this.articleNo = articleNo;
-        this.productCategoryName = category;
+        this.productCategoryId = category;
         this.qty = qty;
         this.createdAt = createdAt;
         this.productId = productId;
@@ -106,8 +108,8 @@ public class WorkModel implements MultiChoiceable, Parcelable {
         return qty;
     }
 
-    public String getProductCategoryName() {
-        return productCategoryName;
+    public String getProductCategoryId() {
+        return productCategoryId;
     }
 
     public boolean isChecked() {
@@ -120,6 +122,10 @@ public class WorkModel implements MultiChoiceable, Parcelable {
 
     public void setSelected(boolean selected) {
         isSelected = selected;
+    }
+
+    public void setProductCategoryId(String productCategoryId) {
+        this.productCategoryId = productCategoryId;
     }
 
     @Override
@@ -203,7 +209,7 @@ public class WorkModel implements MultiChoiceable, Parcelable {
         dest.writeValue(this.spkNo);
         dest.writeValue(this.productId);
         dest.writeString(this.articleNo);
-        dest.writeString(this.productCategoryName);
+        dest.writeString(this.productCategoryId);
         dest.writeValue(this.qty);
         dest.writeByte(this.isDrawn ? (byte) 1 : (byte) 0);
         dest.writeByte(this.isSewn ? (byte) 1 : (byte) 0);
@@ -227,7 +233,7 @@ public class WorkModel implements MultiChoiceable, Parcelable {
         this.spkNo = (Integer) in.readValue(Integer.class.getClassLoader());
         this.productId = (Integer) in.readValue(Integer.class.getClassLoader());
         this.articleNo = in.readString();
-        this.productCategoryName = in.readString();
+        this.productCategoryId = in.readString();
         this.qty = (Integer) in.readValue(Integer.class.getClassLoader());
         this.isDrawn = in.readByte() != 0;
         this.isSewn = in.readByte() != 0;

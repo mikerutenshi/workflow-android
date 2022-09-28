@@ -217,4 +217,7 @@
     <string name="label_assembling_cost">Ongkos Tarik</string>
     <string name="label_outsole_stitching_cost">Ongkos Jahit Sol</string>
     <string name="label_insole_stitching_cost">Ongkos Jahit Tatak</string>
+    <string name="product_category_men_shoes">Sepatu Pria</string>
+    <string name="product_category_men_sandals">Sandal Pria</string>
+    <string name="product_category_women_shoes">Sepatu Wanita</string>
 </resources>

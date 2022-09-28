@@ -10,6 +10,7 @@ import com.google.android.material.card.MaterialCardView;
 import com.workflow.R;
 import com.workflow.data.model.AssignedWorkListModel;
 import com.workflow.utils.DateUtils;
+import com.workflow.utils.WorkflowUtils;
 
 import butterknife.BindString;
 import butterknife.BindView;
@@ -48,7 +49,7 @@ class WorkAssignableViewHolder extends BaseViewHolder<AssignedWorkListModel, OnR
         tvSpkNo.setText(String.valueOf(item.getSpkNo()));
         tvSpkDate.setText(DateUtils.serverToClient(item.getCreatedAt(), DateUtils.TYPE_DATE));
         tvArticleNo.setText(item.getArticleNo());
-        tvCategory.setText(item.getProductCategoryName());
+        tvCategory.setText(WorkflowUtils.transformProductCategory(itemView.getContext(), item.getProductCategoryName()));
         if (item.getQuantityRemaining().equals(item.getQuantityInitial())) {
             tvQuantity.setText(String.format(strQuantitySimple, item.getQuantityRemaining()));
         } else {

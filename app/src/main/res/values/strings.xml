@@ -104,8 +104,8 @@
 
     <string name="worker_detail_title">Detail Tukang</string>
     <string name="worker_detail_assign_work">Assign Job</string>
-    <string name="worker_detail_header_on_progress">Job In Progress</string>
-    <string name="worker_detail_header_done">Hasil Kerjaan</string>
+    <string name="worker_detail_header_on_progress">Jobs In Progress</string>
+    <string name="worker_detail_header_done">Jobs Completed</string>
     <string name="worker_detail_all_works_assigned">All jobs in this category are assigned</string>
 
     <string name="work_list_title">Jobs</string>
@@ -255,5 +255,8 @@
     <string name="label_date_done">Completed At</string>
     <string name="label_sewing_cost">Sew Upper Cost</string>
     <string name="label_insole_stitching_cost">Sew Insole Cost</string>
+    <string name="product_category_men_shoes">Men Shoes</string>
+    <string name="product_category_women_shoes">Women Shoes</string>
+    <string name="product_category_men_sandals">Men Sandals</string>
 
 </resources>

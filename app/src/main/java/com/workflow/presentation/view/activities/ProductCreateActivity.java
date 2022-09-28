@@ -230,6 +230,9 @@ public class ProductCreateActivity extends BaseActivity implements CreateProduct
 
     @Override
     public void renderProductCategories(List<ListModel> productCategories) {
+        for (ListModel category : productCategories) {
+            category.setName(WorkflowUtils.renderProductCategory(this, Integer.valueOf(category.getId())));
+        }
         categoryAdapter.addAll(productCategories);
 
         if (productModel != null) {
@@ -310,7 +313,7 @@ public class ProductCreateActivity extends BaseActivity implements CreateProduct
         etAssemblingCost.setText(String.valueOf(productModel.getAssemblingCost()));
         etInsoleStitchingCost.setText(String.valueOf(productModel.getInsoleStitchingCost()));
         etSoleStitchingCost.setText(String.valueOf(productModel.getSoleStitchingCost()));
-        actvCategory.setText(productModel.getProductCategoryName(), false);
+        actvCategory.setText(WorkflowUtils.renderProductCategory(this, productModel.getProductCategoryId()), false);
         categoryAdapter.setChosenItem(String.valueOf(productModel.getProductCategoryId()));
     }
 

@@ -106,7 +106,7 @@ public class CurrentWorkListFragment extends BaseFragment implements CurrentWork
                         item.getId(),
                         item.getSpkNo(),
                         item.getArticleNo(),
-                        item.getProductCategoryName(),
+                        item.getProductCategoryId().toString(),
                         item.getQuantity(),
                         item.getCreatedAt(),
                         item.getProductId(),

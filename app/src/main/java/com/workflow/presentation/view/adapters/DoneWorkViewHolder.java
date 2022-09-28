@@ -54,7 +54,7 @@ public class DoneWorkViewHolder extends BaseViewHolder<DoneWorkListModel, OnRecy
         tvSpkNo.setText(String.valueOf(item.getSpkNo()));
         tvSpkDate.setText(DateUtils.serverToClient(item.getCreatedAt(), DateUtils.TYPE_DATE));
         tvArticleNo.setText(item.getArticleNo());
-        tvCategory.setText(item.getProductCategoryName());
+        tvCategory.setText(WorkflowUtils.transformProductCategory(itemView.getContext(), item.getProductCategoryName()));
 
         if (item.getQuantityDone().equals(item.getQuantityAssigned())) {
             tvQuantity.setText(String.format(strQuantitySimple, item.getQuantityDone()));
