@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class WorkAssignedPresenterImpl implements WorkerDetailWorkerWorkPresenter<AssignedWorkListModel> {
 
     private int currentPage = 1;
-    private int limit = 10;
+    private int limit = WorkflowUtils.LIMIT;
     private boolean isLoading = false;
     private boolean isLastPage = false;
 

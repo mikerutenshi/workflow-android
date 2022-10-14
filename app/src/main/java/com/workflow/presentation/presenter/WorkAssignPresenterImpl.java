@@ -24,7 +24,7 @@ public class WorkAssignPresenterImpl implements WorkerWorkAssignPresenter<Assign
     private String mWorkerPos;
 
     private int currentPage = 1;
-    private int limit = 10;
+    private int limit = WorkflowUtils.LIMIT;
     private boolean isLoading = false;
     private boolean isLastPage = false;
 

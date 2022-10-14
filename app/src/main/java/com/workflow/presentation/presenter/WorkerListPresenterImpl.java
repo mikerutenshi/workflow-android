@@ -24,7 +24,7 @@ public class WorkerListPresenterImpl implements WorkerListPresenter {
     private final DeleteWorker deleteWorker;
 
     private int currentPage = 1;
-    private int limit = 10;
+    private int limit = WorkflowUtils.LIMIT;
     private boolean isLoading = false;
     private boolean isLastPage = false;
 

@@ -7,6 +7,7 @@ import android.widget.Checkable;
 import androidx.annotation.NonNull;
 
 import com.workflow.data.model.MultiChoiceable;
+import com.workflow.utils.WorkflowUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ public abstract class PaginationAdapter<T, L extends BaseRecyclerListener, VH ex
     private int itemCheckedPosition = -1;
 
     private int currentPage = 1;
-    private int limit = 10;
+    private int limit = WorkflowUtils.LIMIT;
     private boolean isLoading = false;
     private boolean isLastPage = false;
 

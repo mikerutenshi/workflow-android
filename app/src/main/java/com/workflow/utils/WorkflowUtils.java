@@ -35,6 +35,7 @@ public class WorkflowUtils {
     public static final int SNACK_BAR_ERROR = 1;
     public static final int SNACK_BAR_INFO = 2;
     public static final int SNACK_BAR_WARNING = 3;
+    public static final int LIMIT = 50;
 
     private static final Locale indonesian = new Locale("in", "ID");
     public static final SimpleDateFormat indoDateFormat = new SimpleDateFormat("dd MMM yyyy", indonesian);
